@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Databinding_Session_Demo.Demo13"
+             xmlns:local="clr-namespace:Databinding_Session_Demo.Converters"
+             Title="Demo13">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MarksToGrade x:Key="Grader" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout Spacing="25"
+                         Padding="0,50">
+        <Label VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Text="{Binding Source={x:Reference Marks}, Path=Value, Converter={StaticResource Grader}}" />
+        <Slider x:Name="Marks"
+                WidthRequest="300"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Minimum="0"
+                Maximum="100" />
+        <Label Text="{Binding Value, Source={x:Reference Marks}, StringFormat='{0:F2}'}"
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

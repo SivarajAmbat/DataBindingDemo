@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Databinding_Session_Demo.Demo1"
+             Title="Demo1">
+    <VerticalStackLayout Spacing="25"> 
+
+        <Label x:Name="lblName"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label x:Name="lblEmail"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
